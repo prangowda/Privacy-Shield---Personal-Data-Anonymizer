@@ -1,52 +1,59 @@
-# Privacy-Shield--Personal-Data-Anonymizer
-This Python tool anonymizes sensitive personal data in CSV or text files. It helps protect privacy by masking names, emails, phone numbers, credit card details, and addresses while maintaining the file structure. This is useful for data sharing, analytics, and compliance with privacy laws like GDPR and CCPA.
+# Privacy Shield - Personal Data Anonymizer
 
+## 🔍 Project Description
+Privacy Shield is a **Python-based tool** designed to **anonymize personal data** in CSV or text files. It automatically detects and replaces sensitive information such as **names, emails, phone numbers, and credit card details**, ensuring data privacy and compliance with regulations like GDPR and CCPA.
 
-🔒 Why is this Useful?
+---
 
-  ✔ Protects Privacy before sharing datasets.
+## 🛠 Features
+✅ Automatically detects and anonymizes **names, emails, phone numbers, and credit cards**  
+✅ Supports **CSV and Text Files**  
+✅ Customizable Masking (**Fake data, Hashing, or "XXXX" masking**)  
+✅ Fast and efficient using **pandas** and **regex**  
+✅ Helps in **data privacy protection** and **secure data sharing**  
 
-  ✔ Complies with GDPR, CCPA, and Data Protection Laws.
+---
 
-  ✔ Prevents identity theft and sensitive data exposure.
+## 📜 Installation
+Install the required dependencies using pip:
+```sh
+pip install pandas faker
+```
 
-🛠 Features:
+---
 
-  ✅ Automatically detects and anonymizes personal data (Names, Emails, Phone Numbers, etc.).
+## 📂 Usage
+Run the Python script:
+```sh
+python privacy_shield.py
+```
 
-  ✅ Supports CSV and Text Files for easy integration.
+Follow the prompts:
+1. **Enter file type** (csv/text)
+2. **Enter file path** (e.g., `data.csv` or `sample.txt`)
+3. **Anonymized file is saved** as `anonymized_data.csv` or `anonymized_text.txt`
 
-  ✅ Customizable Masking (Replace with XXXX, random names, or hashed values).
+---
 
-  ✅ Fast & Efficient using pandas and re (regex).
+## 📊 Example Input & Output
 
-  ✅ Data Privacy Protection for secure data sharing.
+### 🔹 **Original CSV (`data.csv`)**
+| Name    | Email              | Phone       | Credit Card        |
+|---------|--------------------|------------|---------------------|
+| Alice   | alice@gmail.com    | 987-654-3210 | 1234-5678-9101-1121 |
+| Bob     | bob@yahoo.com      | 876-543-2109 | 2345-6789-0123-4567 |
 
-📜 Step 1: Install Dependencies
+### 🔹 **Anonymized Output (`anonymized_data.csv`)**
+| Name            | Email                  | Phone       | Credit Card        |
+|----------------|------------------------|------------|---------------------|
+| John Doe       | michael12@example.com  | 555-123-4567 | XXXX-XXXX-XXXX-XXXX |
+| Sarah Smith    | anna.williams@mail.com | 333-987-6543 | XXXX-XXXX-XXXX-XXXX |
 
-    pip install pandas faker
-    
- 🔹  pandas – Handles CSV files.
+---
 
- 🔹 faker – Generates fake but realistic replacement data.
-
-📂 Step 2: Python Code (privacy_shield.py)
-
-📂 Step 3: How to Use
-
-   1. Run the Python script
-
-          python privacy_shield.py
-      
-  2. Enter file type (csv or text).
-     
-  3.  Enter file path (e.g., data.csv or sample.txt).
-    
-  5.  Anonymized file is saved as anonymized_data.csv or anonymized_text.txt.
-
-
-
-
-
+## 🚀 Future Enhancements
+🔹 **Encrypt anonymized files** before sharing  
+🔹 **Add database support** (MySQL/PostgreSQL)  
+🔹 **Web-based UI for easy usage**  
 
 
